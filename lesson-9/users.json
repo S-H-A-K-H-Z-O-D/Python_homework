@@ -1,0 +1,41 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "name": "Alice Johnson",
+            "email": "alice.johnson@example.com",
+            "isActive": true,
+            "roles": ["admin", "editor"],
+            "profile": {
+                "age": 30,
+                "city": "New York",
+                "joined": "2023-01-15"
+            }
+        },
+        {
+            "id": 2,
+            "name": "Bob Smith",
+            "email": "bob.smith@example.com",
+            "isActive": false,
+            "roles": ["viewer"],
+            "profile": {
+                "age": 25,
+                "city": "Los Angeles",
+                "joined": "2022-09-10"
+            }
+        }
+    ],
+    "settings": {
+        "theme": "dark",
+        "notifications": {
+            "email": true,
+            "sms": false
+        },
+        "version": 1.2
+    },
+    "metadata": {
+        "createdBy": "system",
+        "createdAt": "2025-01-06T10:30:00Z",
+        "tags": ["example", "sample", "json"]
+    }
+}
