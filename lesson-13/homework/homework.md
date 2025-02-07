@@ -1,64 +1,15 @@
-Task 1. Write a Python function that converts a temperature from Fahrenheit to Celsius. Use `numpy.vectorize` to apply this function to an array of temperatures: `[32, 68, 100, 212, 77]`. 
-   - Formula: $C = (F - 32) \times \frac{5}{9}$
-
----
-
-Task 2. Create a custom function that takes two arguments: a number and a power. Use `numpy.vectorize` to calculate the power for each pair of numbers in two arrays: `[2, 3, 4, 5]` and `[1, 2, 3, 4]`.
-
----
-
-Task 3. Solve the system of equations using `numpy`:
-
-$$
-\begin{cases}
-4x + 5y + 6z = 7 \\
-3x - y + z = 4 \\
-2x + y - 2z = 5
-\end{cases}
-$$
-
----
-
-Task 4. Given the electrical circuit equations below, solve for $I_1, I_2, I_3$ (currents in the branches):
-
-$$
-\begin{cases}
-10I_1 - 2I_2 + 3I_3 = 12 \\
--2I_1 + 8I_2 - I_3 = -5 \\
-3I_1 - I_2 + 6I_3 = 15
-\end{cases}
-$$
-
----
-
-
-**Image Manipulation with NumPy and PIL**
-
-Image file: `images/birds.jpg`. Your task is to perform the following image manipulations using the **NumPy** library while leveraging **PIL** for reading and saving the image.
-
-**Instructions:**
-
-1. **Flip the Image**:
-   - Flip the image horizontally and vertically (left-to-right and up-to-down).
-
-2. **Add Random Noise**:
-   - Add random noise to the image.
-
-3. **Brighten Channels**:
-   - Increase the brightness of the channels (r.g. red channel) by a fixed value (e.g., 40). Clip the values to ensure they stay within the 0 to 255 range.
-
-4. **Apply a Mask**:
-   - Mask a rectangular region in the image (e.g., a 100x100 area in the center) by setting all pixel values in this region to black (0, 0, 0).
-
-**Requirements:**
-- Use the **PIL** module onyl to:
-  - Read the image.
-  - Convert numpy array to image.
-  - Save the modified image back to a file.
-- Perform all manipulations using NumPy functions. Avoid using image editing functions from PIL or other libraries.
-
-
-**Bonus Challenge**:
-- Create a function for each manipulation (e.g., `flip_image`, `add_noise`, `brighten_channels`, `apply_mask`) to promote modularity and reusability of code.
-
---- 
+1. Create a vector with values ranging from 10 to 49.
+2. Create a 3x3 matrix with values ranging from 0 to 8.
+3. Create a 3x3 identity matrix.
+4. Create a 3x3x3 array with random values.
+5. Create a 10x10 array with random values and find the minimum and maximum values.
+6. Create a random vector of size 30 and find the mean value.
+7. Normalize a 5x5 random matrix.
+8. Multiply a 5x3 matrix by a 3x2 matrix (real matrix product).
+9. Create two 3x3 matrices and compute their dot product.  
+10. Given a 4x4 matrix, find its transpose.  
+11. Create a 3x3 matrix and calculate its determinant.  
+12. Create two matrices \( A \) (3x4) and \( B \) (4x3), and compute the matrix product \( A \cdot B \).  
+13. Create a 3x3 random matrix and a 3-element column vector. Compute the matrix-vector product.  
+14. Solve the linear system \( Ax = b \) where \( A \) is a 3x3 matrix, and \( b \) is a 3x1 column vector.  
+15. Given a 5x5 matrix, find the row-wise and column-wise sums.

@@ -1,15 +1,170 @@
-1. Create a vector with values ranging from 10 to 49.
-2. Create a 3x3 matrix with values ranging from 0 to 8.
-3. Create a 3x3 identity matrix.
-4. Create a 3x3x3 array with random values.
-5. Create a 10x10 array with random values and find the minimum and maximum values.
-6. Create a random vector of size 30 and find the mean value.
-7. Normalize a 5x5 random matrix.
-8. Multiply a 5x3 matrix by a 3x2 matrix (real matrix product).
-9. Create two 3x3 matrices and compute their dot product.  
-10. Given a 4x4 matrix, find its transpose.  
-11. Create a 3x3 matrix and calculate its determinant.  
-12. Create two matrices \( A \) (3x4) and \( B \) (4x3), and compute the matrix product \( A \cdot B \).  
-13. Create a 3x3 random matrix and a 3-element column vector. Compute the matrix-vector product.  
-14. Solve the linear system \( Ax = b \) where \( A \) is a 3x3 matrix, and \( b \) is a 3x1 column vector.  
-15. Given a 5x5 matrix, find the row-wise and column-wise sums.
+### Task 1
+
+Scrape weather information from an HTML file and process it using Python and BeautifulSoup.
+
+<h4>5-Day Weather Forecast</h4>
+<table>
+    <thead>
+        <tr>
+            <th>Day</th>
+            <th>Temperature</th>
+            <th>Condition</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Monday</td>
+            <td>25°C</td>
+            <td>Sunny</td>
+        </tr>
+        <tr>
+            <td>Tuesday</td>
+            <td>22°C</td>
+            <td>Cloudy</td>
+        </tr>
+        <tr>
+            <td>Wednesday</td>
+            <td>18°C</td>
+            <td>Rainy</td>
+        </tr>
+        <tr>
+            <td>Thursday</td>
+            <td>20°C</td>
+            <td>Partly Cloudy</td>
+        </tr>
+        <tr>
+            <td>Friday</td>
+            <td>30°C</td>
+            <td>Sunny</td>
+        </tr>
+    </tbody>
+</table>
+
+
+Assume you are given the following HTML structure (you can save it as `weather.html`):
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Weather Forecast</title>
+</head>
+<body>
+    <h4>5-Day Weather Forecast</h4>
+    <table>
+        <thead>
+            <tr>
+                <th>Day</th>
+                <th>Temperature</th>
+                <th>Condition</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Monday</td>
+                <td>25°C</td>
+                <td>Sunny</td>
+            </tr>
+            <tr>
+                <td>Tuesday</td>
+                <td>22°C</td>
+                <td>Cloudy</td>
+            </tr>
+            <tr>
+                <td>Wednesday</td>
+                <td>18°C</td>
+                <td>Rainy</td>
+            </tr>
+            <tr>
+                <td>Thursday</td>
+                <td>20°C</td>
+                <td>Partly Cloudy</td>
+            </tr>
+            <tr>
+                <td>Friday</td>
+                <td>30°C</td>
+                <td>Sunny</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>
+```
+
+1. **Parse the HTML File**:
+   - Load the `weather.html` file using BeautifulSoup and extract the weather forecast details.
+
+2. **Display Weather Data**:
+   - Print the **day**, **temperature**, and **condition** for each entry in the forecast.
+
+3. **Find Specific Data**:
+   - Identify and print the day(s) with:
+     - The highest temperature.
+     - The "Sunny" condition.
+
+4. **Calculate Average Temperature**:
+   - Compute and print the **average temperature** for the week.
+
+---
+
+### Task 2
+
+Scrape job listings from the website https://realpython.github.io/fake-jobs and store the data into an SQLite database.
+
+1. **Scraping Requirements**:
+   - Extract the following details for each job listing:
+     - **Job Title**
+     - **Company Name**
+     - **Location**
+     - **Job Description**
+     - **Application Link**
+
+2. **Data Storage**:
+   - Store the scraped data into an SQLite database in a table named `jobs`.
+
+3. **Incremental Load**:
+   - Ensure that your script performs **incremental loading**:
+     - Scrape the webpage and add only **new job listings** to the database.
+     - Avoid duplicating entries. Use `Job Title`, `Company Name`, and `Location` as unique identifiers for comparison.
+
+4. **Update Tracking**:
+   - Add functionality to detect if an existing job listing has been updated (e.g., description or application link changes) and update the database record accordingly.
+
+5. **Filtering and Exporting**:
+   - Allow filtering job listings by **location** or **company name**.
+   - Write a function to export filtered results into a CSV file.
+
+
+### Task 3
+
+You are tasked with scraping laptop data from the "Laptops" section of the [Demoblaze website](https://www.demoblaze.com/) and storing the extracted information in JSON format.
+
+**Steps:**
+
+1. **Navigate to the Website:**
+   - Visit the [Demoblaze homepage](https://www.demoblaze.com/).
+   - Click on the **Laptops** section to view the list of available laptops.
+
+2. **Navigate to the Next Page:**
+   - After reaching the Laptops section, locate and click the **Next** button to navigate to the next page of laptop listings.
+
+3. **Data to Scrape:**
+   For each laptop on the page, scrape the following details:
+   - **Laptop Name**
+   - **Price**
+   - **Description**
+
+4. **Data Storage:**
+   - Save the extracted information in a structured **JSON format** with fields like:
+     ```json
+     [
+       {
+         "name": "Laptop Name",
+         "price": "Laptop Price",
+         "description": "Laptop Description"
+       },
+       ...
+     ]
+     ```
+

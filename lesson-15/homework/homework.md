@@ -1,51 +1,46 @@
-### Homework: Pandas Basics
 
-#### Part 1: Reading Files  
-1. **`chinook.db`**  
-   - Use the `sqlite3` library to connect to the database.  
-   - Read the `customers` table into a pandas DataFrame. Display the first 10 rows.  
-
-2. **`iris.json`**  
-   - Load the JSON file into a DataFrame. Show the shape of the dataset and the column names.  
-
-3. **`titanic.xlsx`**  
-   - Load the Excel file into a DataFrame. Use `head` to display the first 5 rows.  
-
-4. **Flights parquet file**  
-   - Read the Parquet file into a DataFrame and use `info` to summarize it.  
-
-5. **`movie.csv`**  
-   - Load the CSV file into a DataFrame and display a random sample of 10 rows.
+#### **1. Basic Plotting**
+- **Task**: Plot the function $ f(x) = x^2 - 4x + 4 $ for $ x $ values between -10 and 10. Customize the plot with appropriate labels for the axes and a title.
 
 ---
 
-#### Part 2: Exploring DataFrames  
-1. Using the DataFrame from **`iris.json`**:  
-   - Rename the columns to lowercase.  
-   - Select only the `sepal_length` and `sepal_width` columns.  
-
-2. From the **`titanic.xlsx`** DataFrame:  
-   - Filter rows where the age of passengers is above 30.  
-   - Count the number of male and female passengers (`value_counts`).  
-
-3. From the **Flights parquet file**:  
-   - Extract and print only the `origin`, `dest`, and `carrier` columns.  
-   - Find the number of unique destinations.  
-
-4. From the **`movie.csv`** file:  
-   - Filter rows where `duration` is greater than 120 minutes.  
-   - Sort the filtered DataFrame by `director_facebook_likes` in descending order.  
+#### **2. Sine and Cosine Plot**
+- **Task**: Plot $ \sin(x) $ and $ \cos(x) $ on the same graph for $ x $ values ranging from 0 to $ 2\pi $. Use different line styles, markers, and colors to distinguish between the two functions. Add a legend.
 
 ---
 
-#### Part 3: Challenges and Explorations  
- 
-- From **`iris.json`**: Calculate the mean, median, and standard deviation for each numerical column.  
-- From **`titanic.xlsx`**: Find the minimum, maximum, and sum of passenger ages.  
+#### **3. Subplots**
+- **Task**: Create a 2x2 grid of subplots. In each subplot, plot:
+  - Top-left: $ f(x) = x^3 $
+  - Top-right: $ f(x) = \sin(x) $
+  - Bottom-left: $ f(x) = e^x $
+  - Bottom-right: $ f(x) = \log(x+1) $ (for $ x \geq 0 $)
 
-- From **`movie.csv`**:  
-    - Identify the director with the highest total `director_facebook_likes`.  
-    - Find the 5 longest movies and their respective directors.  
+  Customize each plot with titles, axis labels, and different colors.
 
-- From **Flights parquet file**:  
-    - Check for missing values in the dataset. Fill missing values in a numerical column with the column’s mean.  
+---
+
+#### **4. Scatter Plot**
+- **Task**: Create a scatter plot of 100 random points in a 2D space. The x and y values should be randomly generated from a uniform distribution between 0 and 10. Use different colors and markers for the points. Add a title, axis labels, and a grid.
+
+---
+
+#### **5. Histogram**
+- **Task**: Generate a random dataset of 1000 values sampled from a normal distribution (mean=0, std=1). Plot a histogram of the data with 30 bins. Add a title and axis labels. Adjust the transparency of the bars using the `alpha` parameter.
+
+
+---
+
+#### **6. 3D Plotting**
+- **Task**: Create a 3D surface plot for the function $ f(x, y) = \cos(x^2 + y^2) $ over the range of $ x $ and $ y $ values from -5 to 5. Use a suitable colormap and add a colorbar. Set appropriate labels for the axes and title.
+
+---
+
+#### **7. Bar Chart**
+- **Task**: Create a vertical bar chart displaying the sales data for five different products: `['Product A', 'Product B', 'Product C', 'Product D', 'Product E']`. The sales values for each product are `[200, 150, 250, 175, 225]`. Customize the chart with a title, axis labels, and different bar colors.
+
+
+---
+
+#### **8. Stacked Bar Chart**
+- **Task**: Create a stacked bar chart that shows the contribution of three different categories (`'Category A'`, `'Category B'`, and `'Category C'`) over four time periods (`'T1'`, `'T2'`, `'T3'`, `'T4'`). Use sample data for each category at each time period. Customize the chart with a title, axis labels, and a legend.
